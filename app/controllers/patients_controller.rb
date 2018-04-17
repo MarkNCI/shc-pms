@@ -6,6 +6,14 @@ class PatientsController < ApplicationController
   def index
     @q = Patient.ransack(params[:q])
     @patients = @q.result(distinct: true)
+    
+    respond_to do |format|
+      format.html
+      format.pdf do
+        pdf = PatientPdf.new(@patient)
+        send_data pdf.render, filename: 'patients.pdf',trpe: 'application/pdf',disposition: "inline"
+      end
+    end
   end
 
   # GET /patients/1

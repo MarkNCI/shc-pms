@@ -6,6 +6,7 @@
   <div class="field">
     <%= f.label :condition_cont, "Patients with Condition" %>
     <%= f.text_field :condition_cont %>
+    <%= sort_link(@q, :date_of_birth) %>
   </div>
   <div class="actions"><%= f.submit "Search" %></div>
 <% end %>
@@ -41,3 +42,4 @@
 <br>
 
 <%= link_to 'New Patient', new_patient_path %>
+<%= link_to 'PDF File', patients_path(format: "pdf") %>
