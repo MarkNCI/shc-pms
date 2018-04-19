@@ -2,6 +2,7 @@ require "pricegem/version"
 
 module MyModule
 class Pricegem
+  include ::Pricegem
   def self.check(age)
       if age<18
           result = "Price is $25"
