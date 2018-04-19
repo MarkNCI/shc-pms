@@ -11,7 +11,8 @@ class PatientsController < ApplicationController
       format.html
       format.pdf do
         pdf = PatientPdf.new(@patient)
-        send_data pdf.render, filename: 'patients.pdf',trpe: 'application/pdf',disposition: "inline"
+        send_data pdf.render, filename: 'patients.pdf',type: 'application/pdf',disposition: "inline"
+
       end
     end
   end
@@ -19,6 +20,11 @@ class PatientsController < ApplicationController
   # GET /patients/1
   # GET /patients/1.json
   def show
+  end
+  
+  def price
+   @input1 = params[:search_string]
+   @result = Pricegem.check(@input1.to_i)
   end
 
   # GET /patients/new
@@ -78,6 +84,6 @@ class PatientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def patient_params
-      params.require(:patient).permit(:name, :date_of_birth, :address, :phone_no, :condition)
+      params.require(:patient).permit(:name, :age, :date_of_birth, :address, :phone_no, :condition)
     end
 end

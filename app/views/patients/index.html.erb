@@ -6,15 +6,18 @@
   <div class="field">
     <%= f.label :condition_cont, "Patients with Condition" %>
     <%= f.text_field :condition_cont %>
-    <%= sort_link(@q, :date_of_birth) %>
+    
   </div>
+  
   <div class="actions"><%= f.submit "Search" %></div>
+  
 <% end %>
 
 <table>
   <thead>
     <tr>
       <th>Name</th>
+      <th>Age</th>
       <th>Date of birth</th>
       <th>Address</th>
       <th>Phone no</th>
@@ -27,6 +30,7 @@
     <% @patients.each do |patient| %>
       <tr>
         <td><%= patient.name %></td>
+        <td><%= patient.age %></td>
         <td><%= patient.date_of_birth %></td>
         <td><%= patient.address %></td>
         <td><%= patient.phone_no %></td>
@@ -42,4 +46,7 @@
 <br>
 
 <%= link_to 'New Patient', new_patient_path %>
-<%= link_to 'PDF File', patients_path(format: "pdf") %>
+<%= link_to 'View as PDF', patients_path(format: "pdf") %>
+
+
+<%= pie_chart Patient.group(:condition).count %>
