@@ -231,7 +231,7 @@ DEPENDENCIES
   pg
   prawn
   prawn-table
-  pricegem
+  pricegem (~> 0.1.0)
   puma (~> 3.7)
   rails (~> 5.1.6)
   rails_12factor
