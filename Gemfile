@@ -30,7 +30,7 @@ gem 'ransack'
 gem 'prawn'
 gem 'prawn-table'
 gem 'chartkick'
-#gem 'pricegem'
+gem 'pricegem'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
