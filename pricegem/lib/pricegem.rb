@@ -1,5 +1,6 @@
 require "pricegem/version"
 
+module MyModule
 class Pricegem
   def self.check(age)
       if age<18
@@ -12,4 +13,5 @@ class Pricegem
       return result
       end
   end
+end
 end
