@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{price gem}
   spec.description   = %q{price gem}
-  spec.homepage      = ""
+  spec.homepage      = "https://rubygems.org/gems/pricegem"
 
  
 
