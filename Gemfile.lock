@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/MarkNCI/pricegem.git
+  revision: 80750e2746eb7729faf1a150246458c858285435
+  specs:
+    pricegem (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -114,7 +120,6 @@ GEM
       ttfunk (~> 1.5)
     prawn-table (0.2.2)
       prawn (>= 1.3.0, < 3.0.0)
-    pricegem (0.1.0)
     public_suffix (3.0.2)
     puma (3.11.4)
     rack (2.0.4)
@@ -231,7 +236,7 @@ DEPENDENCIES
   pg
   prawn
   prawn-table
-  pricegem (~> 0.1.0)
+  pricegem!
   puma (~> 3.7)
   rails (~> 5.1.6)
   rails_12factor
