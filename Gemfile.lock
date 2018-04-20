@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/MarkNCI/calcgem.git
-  revision: f095a8a199a9c8220a67212bdd4b377572109f98
+  revision: ef162e058e6ce712f84b97ad8b5405f11dc54e1d
   specs:
     calcgem (0.1.0)
 
