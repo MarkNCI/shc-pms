@@ -6,7 +6,7 @@
   <div class="field">
     <%= f.label :condition_cont, "Patients with Condition" %>
     <%= f.text_field :condition_cont %>
-    
+    <%= sort_link(@q, :age, 'Sort by Age') %>
   </div>
   
   <div class="actions"><%= f.submit "Search" %></div>
