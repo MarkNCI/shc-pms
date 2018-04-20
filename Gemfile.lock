@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/MarkNCI/pricegem.git
+  revision: 730cd7f2e5876ad7843fab3f40f18ac66603a5d6
+  specs:
+    pricegem (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -63,7 +69,6 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
-    costgem (0.0.0)
     crass (1.0.4)
     dalli (2.7.8)
     devise (4.4.3)
@@ -222,7 +227,6 @@ DEPENDENCIES
   capybara (~> 2.13)
   chartkick
   coffee-rails (~> 4.2)
-  costgem
   dalli
   devise
   jbuilder (~> 2.5)
@@ -232,6 +236,7 @@ DEPENDENCIES
   pg
   prawn
   prawn-table
+  pricegem!
   puma (~> 3.7)
   rails (~> 5.1.6)
   rails_12factor
