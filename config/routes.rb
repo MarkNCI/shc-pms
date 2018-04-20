@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :doctors
   root "patients#index"
   get '/check', :controller=>'patients', :action=>'checkprice'
-  post '/validate', :controller=>'patients', :action=>'price'
+  post '/validate', :controller=>'patients', :action=>'cost'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -22,11 +22,11 @@ class PatientsController < ApplicationController
   def show
   end
   
-  def price
-   @input1 = params[:search_string]
-   @result = Pricegem.check(@input1.to_i)
+  def cost
+     @input1 = params[:search_string]
+     @result = Checkprice.runcheck(@input1.to_i)
   end
-
+  
   # GET /patients/new
   def new
     @patient = Patient.new
