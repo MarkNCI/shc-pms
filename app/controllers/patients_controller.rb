@@ -24,7 +24,7 @@ class PatientsController < ApplicationController
   
   def cost
      @input1 = params[:search_string]
-     @result = Checkprice.runcheck(@input1.to_i)
+     @result = Calcgem.check(@input1.to_i)
   end
   
   # GET /patients/new
