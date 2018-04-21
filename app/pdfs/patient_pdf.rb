@@ -10,9 +10,9 @@ class PatientPdf < Prawn::Document
     end
     
     def user_id_all
-        [["name","date_of_birth","address","phone_no","condition"]]+
+        [["name","age","date_of_birth","address","phone_no","condition"]]+
         @patient.map do |patient|
-            [patient.name,patient.date_of_birth,patient.address,patient.phone_no,patient.condition]
+            [patient.name,patient.age,patient.date_of_birth,patient.address,patient.phone_no,patient.condition]
         end
     end
 end
