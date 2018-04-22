@@ -2,6 +2,7 @@
 
 <h1>Patients</h1>
 
+<!--Code for searching by condition and sorting based on age-->
 <%= search_form_for @q do |f| %>
   <div class="field">
     <%= f.label :condition_cont, "Patients with Condition" %>
@@ -12,7 +13,7 @@
   <div class="actions"><%= f.submit "Search" %></div>
   
 <% end %>
-
+<!--Code to display Patient data-->
 <table>
   <thead>
     <tr>
@@ -44,9 +45,9 @@
 </table>
 
 <br>
-
+<!--Code to create new Patient record and view records as pdf-->
 <%= link_to 'New Patient', new_patient_path %>
 <%= link_to 'View as PDF', patients_path(format: "pdf") %>
 
-
+<!--Code to display Patient conditions on pie chart-->
 <%= pie_chart Patient.group(:condition).count %>

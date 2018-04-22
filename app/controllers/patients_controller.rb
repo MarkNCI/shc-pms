@@ -4,9 +4,12 @@ class PatientsController < ApplicationController
   # GET /patients
   # GET /patients.json
   def index
+    
+    #Code for searching Patient
     @q = Patient.ransack(params[:q])
     @patients = @q.result(distinct: true)
     
+    #Code for rendering Patient data as pdf
     respond_to do |format|
       format.html
       format.pdf do
@@ -22,6 +25,7 @@ class PatientsController < ApplicationController
   def show
   end
   
+  #Code for Custom Gem, taking in user input and displaying results
   def cost
      @input1 = params[:search_string]
      @result = Calcgem.runcheck(@input1.to_i)

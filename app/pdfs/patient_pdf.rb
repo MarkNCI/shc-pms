@@ -1,3 +1,5 @@
+#Prawn.pdf - Pull data from Patient table and display in pdf format
+
 class PatientPdf < Prawn::Document
     def initialize(patients)
         super()
