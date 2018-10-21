@@ -4,7 +4,7 @@ This project required me to build a Smart Health Care-Patient Management  System
 For a more detailed description please see the Project Documentation 
 
 # Gems Used
-Materialize-sass: UI Design
+Materialize-sass: UI Design 
 Devise: Doctor Registration/Login
 Ransack: Search and Sort
 Prawn/Prawn-Table: PDF Report
